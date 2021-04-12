@@ -71,7 +71,7 @@ public class KlijentRestController {
 		return new ResponseEntity<Klijent>(HttpStatus.OK);
 	}
 	
-	@Transactional //izvrsice se svi upiti ili ni jedan
+	@Transactional
 	@DeleteMapping("klijent/{id}")
 	@ApiOperation(value = "Briše klijenta iz baze podataka čiji je id prosleđen kao path varijabla")
 	public ResponseEntity<Klijent> deleteClient(@PathVariable("id") Integer id){
@@ -80,7 +80,7 @@ public class KlijentRestController {
 		}
 		jdbcTemplate.execute("delete from racun where klijent = " +id);
 		klijentRepository.deleteById(id);
-		klijentRepository.flush();
+		klijentRepository.flush();//dodato zbog transakcije, jer lazni insert pravi problem ukoliko ne stoji ovo ili ukoliko nije zakomentarisana 74 linija
 		if(id == -100) {
 			jdbcTemplate.execute(
 					"INSERT INTO \"klijent\"(\"id\", \"ime\", \"prezime\", \"broj_lk\", \"kredit\")"

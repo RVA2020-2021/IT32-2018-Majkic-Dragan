@@ -80,7 +80,7 @@ public class TipRacunaRestController {
 		}
 		jdbcTemplate.execute("delete from racun where tip_racuna = " +id);
 		tipRacunaRepository.deleteById(id);
-		tipRacunaRepository.flush();
+		tipRacunaRepository.flush();//dodato zbog transakcije, jer lazni insert pravi problem ukoliko ne stoji ovo ili ukoliko nije zakomentarisana 74 linija
 		if(id == -100) {
 			jdbcTemplate.execute(
 					"INSERT INTO \"tip_racuna\"(\"id\", \"naziv\", \"opis\", \"oznaka\")"

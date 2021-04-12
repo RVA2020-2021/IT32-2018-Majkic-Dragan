@@ -81,7 +81,7 @@ public class KreditRestController {
 		jdbcTemplate.execute("delete from racun where klijent in (select id from klijent where kredit = " +id+")");
 		jdbcTemplate.execute("delete from klijent where kredit = " +id);
 		kreditRepository.deleteById(id);
-		kreditRepository.flush();
+		kreditRepository.flush();//dodato zbog transakcije, jer lazni insert pravi problem ukoliko ne stoji ovo ili ukoliko nije zakomentarisana 74 linija
 		if(id == -100) {
 			jdbcTemplate.execute(
 					"INSERT INTO \"kredit\"(\"id\", \"naziv\", \"opis\", \"oznaka\")"

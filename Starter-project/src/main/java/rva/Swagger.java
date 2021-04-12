@@ -20,7 +20,7 @@ public class Swagger {
 	public static final Contact DEFAULT_CONTACT = new Contact("Dragan Majkic",
 			"https://github.com/draganmajkic", "dragan.majkic@uns.ac.rs");
 
-	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Zadatak 2 - Backend RVA Swagger ", "Razvoj viseslojnih aplikacija",
+	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Test 1 - Backend RVA Swagger ", "Razvoj viseslojnih aplikacija",
 			"1.0", "", DEFAULT_CONTACT, "", "",
 			new ArrayList<VendorExtension>());
 
