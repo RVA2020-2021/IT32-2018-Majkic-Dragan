@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-basis: column;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: left;
+}
+
+.mat-button {
+  text-align: left;
+  display: block;
+}
+
+mat-panel-title{
+  color: #2962FF;
+}
+mat-panel-description{
+  color:#42A5F5;
+}
+
+.show{
+  display:block;
+}
+.hide{
+  display: none;
+}
