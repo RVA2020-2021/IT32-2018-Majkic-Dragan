@@ -28,7 +28,8 @@ import rva.repository.RacunRepository;
 public class RacunRestController {
 
 	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate; 
+	
 	
 	@Autowired 
 	private RacunRepository racunRepository;

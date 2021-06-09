@@ -24,7 +24,7 @@ import rva.repository.TipRacunaRepository;
 
 @CrossOrigin
 @RestController
-@Api(tags = {"Tip Racuna CRUD operacije"})
+@Api(tags = {"Tip Racuna - CRUD operacije"})
 public class TipRacunaRestController {
 	
 	@Autowired

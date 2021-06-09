@@ -38,6 +38,7 @@ export class RacunComponent implements OnInit, OnChanges {
     }
   }
 
+
   public loadData(){
     this.racunService.getClientBills(this.selectedClient.id)
       .subscribe(data => {
